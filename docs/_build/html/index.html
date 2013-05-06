@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to the Dalvik Tutorial Source Page! &mdash; Dalvik Tutorial 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Dalvik Tutorial 1.0 documentation" href="#" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="#">Dalvik Tutorial 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-the-dalvik-tutorial-source-page">
+<h1>Welcome to the Dalvik Tutorial Source Page!<a class="headerlink" href="#welcome-to-the-dalvik-tutorial-source-page" title="Permalink to this headline">¶</a></h1>
+<p>This page contains some very basic instructions on how to build a .dex file. They include:</p>
+<ol class="arabic">
+<li><p class="first">Download the Android SDK at <a class="reference external" href="http://developer.android.com/sdk/">here</a>. Choose the &#8220;ADT Bundle&#8221; appropriate for your OS. Android SDK is the primary tool for developing all Android applications.</p>
+</li>
+<li><p class="first">Clone the git repository for the Dalvik sample application at <a class="reference external" href="https://github.com/bkneely/Dalvik.git">https://github.com/bkneely/Dalvik.git</a></p>
+</li>
+<li><p class="first">Comple the sample class Simple.java (or your own Java class) using:</p>
+<div class="highlight-python"><pre>javac Simple.java</pre>
+</div>
+</li>
+<li><p class="first">Use the dx utility to build the .dex file. dx is located in the /sdk/platform-tools directory of your Android SDK install directory. Run the following:</p>
+<div class="highlight-python"><pre>dx --dex --output=Simple.dex Simple.class</pre>
+</div>
+</li>
+<li><p class="first">Use the dexdump utility to generate a human-readable .dex file. dexdump is also located in SDK_ROOT/sdk/platform-tools. Run the following:</p>
+<div class="highlight-python"><pre>dexdump -d Simple.dex &gt; Simple_dexdump.txt</pre>
+</div>
+</li>
+<li><p class="first">Now you can explore the workings of the Dalvik Executable!</p>
+</li>
+</ol>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="#">Dalvik Tutorial 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2013, Brian Neely.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2b1.
+    </div>
+  </body>
+</html>
