@@ -1,0 +1,87 @@
+Processing 'Simple.dex'...
+Opened 'Simple.dex', DEX version '035'
+Class #0            -
+  Class descriptor  : 'LSimple;'
+  Access flags      : 0x0000 ()
+  Superclass        : 'Ljava/lang/Object;'
+  Interfaces        -
+  Static fields     -
+    #0              : (in LSimple;)
+      name          : 'field1'
+      type          : 'I'
+      access        : 0x0008 (STATIC)
+    #1              : (in LSimple;)
+      name          : 'field2'
+      type          : 'LSimple;'
+      access        : 0x0008 (STATIC)
+    #2              : (in LSimple;)
+      name          : 'field3'
+      type          : 'I'
+      access        : 0x0008 (STATIC)
+  Instance fields   -
+  Direct methods    -
+    #0              : (in LSimple;)
+      name          : '<init>'
+      type          : '()V'
+      access        : 0x10000 (CONSTRUCTOR)
+      code          -
+      registers     : 1
+      ins           : 1
+      outs          : 1
+      insns size    : 4 16-bit code units
+000128:                                        |[000128] Simple.<init>:()V
+000138: 7010 0300 0000                         |0000: invoke-direct {v0}, Ljava/lang/Object;.<init>:()V // method@0003
+00013e: 0e00                                   |0003: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=1
+      locals        : 
+        0x0000 - 0x0004 reg=0 this LSimple; 
+
+    #1              : (in LSimple;)
+      name          : 'foo'
+      type          : '()V'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 0
+      ins           : 0
+      outs          : 0
+      insns size    : 1 16-bit code units
+000140:                                        |[000140] Simple.foo:()V
+000150: 0e00                                   |0000: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=6
+      locals        : 
+
+    #2              : (in LSimple;)
+      name          : 'main'
+      type          : '([Ljava/lang/String;)V'
+      access        : 0x0009 (PUBLIC STATIC)
+      code          -
+      registers     : 3
+      ins           : 1
+      outs          : 0
+      insns size    : 14 16-bit code units
+000154:                                        |[000154] Simple.main:([Ljava/lang/String;)V
+000164: 2120                                   |0000: array-length v0, v2
+000166: 1401 5b42 0f00                         |0001: const v1, #float 0.000000 // #000f425b
+00016c: b010                                   |0004: add-int/2addr v0, v1
+00016e: 6700 0000                              |0005: sput v0, LSimple;.field1:I // field@0000
+000172: 1200                                   |0007: const/4 v0, #int 0 // #0
+000174: 6900 0100                              |0008: sput-object v0, LSimple;.field2:LSimple; // field@0001
+000178: 7100 0100 0000                         |000a: invoke-static {}, LSimple;.foo:()V // method@0001
+00017e: 0e00                                   |000d: return-void
+      catches       : (none)
+      positions     : 
+        0x0000 line=10
+        0x0001 line=11
+        0x0004 line=12
+        0x0007 line=13
+        0x000a line=14
+        0x000d line=15
+      locals        : 
+
+  Virtual methods   -
+  source_file_idx   : 4 (Simple.java)
+
